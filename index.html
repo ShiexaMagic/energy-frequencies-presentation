@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Frequencies - Art Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Click to Start Overlay -->
+    <div class="start-overlay" id="startOverlay" onclick="startPresentation()">
+        <div class="start-content">
+            <div class="start-icon">PLAY</div>
+            <span>დააჭირეთ დასაწყებად</span>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="../Music And video/Anushka Chkheidze - Lingotto.mp4" type="audio/mp4">
+    </audio>
+    
+    <!-- Audio Reactive Bars -->
+    <div class="audio-visualizer" id="audioVisualizer">
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+        <div class="visualizer-bar"></div>
+    </div>
+    
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicToggle" onclick="toggleMusic()">
+        <span class="music-icon">🔇</span>
+        <span class="music-text">მუსიკა</span>
+    </button>
+
+    <div class="presentation-container">
+        <!-- Navigation -->
+        <nav class="slide-nav">
+            <div class="nav-dots" id="navDots"></div>
+            <div class="nav-arrows">
+                <button class="nav-arrow prev" onclick="prevSlide()">&#8249;</button>
+                <button class="nav-arrow next" onclick="nextSlide()">&#8250;</button>
+            </div>
+        </nav>
+
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide1">
+            <div class="slide-bg animated-bg"></div>
+            <div class="slide-content center-content">
+                <div class="logo-container">
+                    <div class="energy-circle"></div>
+                    <div class="energy-circle delay-1"></div>
+                    <div class="energy-circle delay-2"></div>
+                </div>
+                <h1 class="main-title">Energy Frequencies</h1>
+                <p class="subtitle">ინტერდისციპლინური არტ-პროექტი</p>
+                <div class="tagline">ფერწერა • მუსიკა • სინათლე</div>
+                <div class="scroll-indicator">
+                    <span>გადაფურცლეთ</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Concept -->
+        <section class="slide" id="slide2">
+            <div class="slide-bg gradient-bg-2"></div>
+            <div class="slide-content">
+                <div class="content-grid">
+                    <div class="text-section">
+                        <h2 class="section-title">კონცეფცია</h2>
+                        <div class="divider"></div>
+                        <p class="description">
+                            „Energy Frequencies" წარმოადგენს ინტერდისციპლინურ გამოფენა-პერფორმანსს, 
+                            რომელიც აერთიანებს <span class="highlight">თანამედროვე ფერწერას</span>, 
+                            <span class="highlight">ცოცხალ ექსპერიმენტალურ მუსიკას</span> და 
+                            <span class="highlight">პროგრამულად მართულ სინათლისა და ვიზუალური პროექციის სისტემებს</span>.
+                        </p>
+                    </div>
+                    <div class="visual-section">
+                        <div class="concept-visual">
+                            <div class="concept-item painting">
+                                <span>ფერწერა</span>
+                            </div>
+                            <div class="concept-item music">
+                                <span>მუსიკა</span>
+                            </div>
+                            <div class="concept-item light">
+                                <span>სინათლე</span>
+                            </div>
+                            <div class="connection-lines"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Mission -->
+        <section class="slide" id="slide3">
+            <div class="slide-bg gradient-bg-3"></div>
+            <div class="slide-content center-content">
+                <h2 class="section-title">მისია</h2>
+                <div class="divider center"></div>
+                <div class="mission-statement">
+                    <blockquote>
+                        „აჩვენოს, როგორ შეიძლება ხელოვნებისა და თანამედროვე ტექნოლოგიების სინთეზმა 
+                        შექმნას <span class="glow-text">ღრმა ემოციური და ფსიქოლოგიური გამოცდილება</span> 
+                        მაყურებლისთვის."
+                    </blockquote>
+                </div>
+                <div class="mission-icons">
+                    <div class="mission-item">
+                        <span>ფსიქოლოგიური გამოცდილება</span>
+                    </div>
+                    <div class="mission-item">
+                        <span>ემოციური კავშირი</span>
+                    </div>
+                    <div class="mission-item">
+                        <span>ახალი პერსპექტივა</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Experiment -->
+        <section class="slide" id="slide4">
+            <div class="slide-bg gradient-bg-4"></div>
+            <div class="slide-content">
+                <h2 class="section-title">ექსპერიმენტი</h2>
+                <div class="divider"></div>
+                <div class="experiment-flow">
+                    <div class="flow-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>დიდი ფორმატის ფერწერა</h3>
+                            <p>PsyArt მიმართულების ნამუშევრები</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>ციფრული ტრანსფორმაცია</h3>
+                            <p>რეალურ დროში დამუშავება</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>სინქრონიზაცია</h3>
+                            <p>მუსიკა + სინათლე + პროექცია</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step highlight-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>მულტისენსორული სივრცე</h3>
+                            <p>ჰარმონიული გამოცდილება</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Video Projection Example -->
+        <section class="slide" id="slide5">
+            <div class="slide-bg gradient-bg-5"></div>
+            <div class="slide-content center-content">
+                <h2 class="section-title">პროექციის მაგალითი</h2>
+                <div class="divider center"></div>
+                <div class="dual-video-container">
+                    <div class="video-panel">
+                        <div class="video-label">ციფრული ტრანსფორმაცია</div>
+                        <div class="video-container">
+                            <video id="projectionVideo" controls playsinline>
+                                <source src="../Music And video/VarlamxAnushka.2.mov" type="video/quicktime">
+                                <source src="../Music And video/VarlamxAnushka.2.mov" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="video-panel">
+                        <div class="video-label">რეალური პროექცია</div>
+                        <div class="video-container">
+                            <video id="instagramVideo" controls playsinline data-trim-start="4" data-trim-end="4">
+                                <source src="../Music And video/Instagram.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-credits">
+                    <span>ვარლამ ჩარკვიანი × ანუშკა ჩხეიძე</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Team -->
+        <section class="slide" id="slide6">
+            <div class="slide-bg gradient-bg-5"></div>
+            <div class="slide-content">
+                <h2 class="section-title">გუნდი</h2>
+                <div class="divider center"></div>
+                <div class="team-grid">
+                    <a href="https://www.instagram.com/charkviani_art/" target="_blank" class="team-member">
+                        <div class="member-photo">
+                            <img src="../Photos/Varlam.jpg" alt="ვარლამ ჩარკვიანი" class="photo-img">
+                        </div>
+                        <h3>ვარლამ ჩარკვიანი</h3>
+                        <p class="role">თანამედროვე მხატვარი</p>
+                        <p class="specialty">PsyArt მიმართულება</p>
+                    </a>
+                    <a href="https://chkheidzeanushka.bandcamp.com/music" target="_blank" class="team-member">
+                        <div class="member-photo">
+                            <img src="../Photos/Anushka.jpg" alt="ანუშკა ჩხეიძე" class="photo-img">
+                        </div>
+                        <h3>ანუშკა ჩხეიძე</h3>
+                        <p class="role">მუსიკოსი / კომპოზიტორი</p>
+                        <p class="specialty">ექსპერიმენტალური მუსიკა</p>
+                    </a>
+                    <a href="https://vimeo.com/user243051937?fl=pp&fe=sh" target="_blank" class="team-member">
+                        <div class="member-photo">
+                            <img src="../Photos/Shio.jpg" alt="შიო ხიდაშელი" class="photo-img">
+                        </div>
+                        <h3>შიო ხიდაშელი</h3>
+                        <p class="role">ტექნიკური დირექტორი</p>
+                        <p class="specialty">განათება • ხმა • ვიდეო</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: SOLO Partnership -->
+        <section class="slide" id="slide7">
+            <div class="slide-bg gradient-bg-6"></div>
+            <div class="slide-content">
+                <div class="solo-badge">
+                    <span class="solo-logo">SOLO</span>
+                    <span class="solo-tagline">Bank of Georgia</span>
+                </div>
+                <h2 class="section-title">SOLO-სთან პარტნიორობა</h2>
+                <div class="divider center"></div>
+                <div class="partnership-content">
+                    <div class="values-match">
+                        <h3>საერთო ღირებულებები</h3>
+                        <div class="value-items">
+                            <div class="value-item">
+                                <span>ინოვაცია</span>
+                            </div>
+                            <div class="value-item">
+                                <span>ინტელექტუალური კულტურა</span>
+                            </div>
+                            <div class="value-item">
+                                <span>თანამედროვე აზროვნება</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-nature">
+                        <div class="nature-card">
+                            <h4>არაკომერციული მიზანი</h4>
+                            <p>ახალი გამოცდილების შექმნა საზოგადოებისთვის</p>
+                        </div>
+                        <div class="nature-card">
+                            <h4>კულტურული მნიშვნელობა</h4>
+                            <p>თანამედროვე ხელოვნების სხვა კუთხით დანახვა</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: What We Offer -->
+        <section class="slide" id="slide8">
+            <div class="slide-bg gradient-bg-7"></div>
+            <div class="slide-content">
+                <h2 class="section-title">თანამშრომლობის ფორმატი</h2>
+                <div class="divider center"></div>
+                <div class="offer-grid">
+                    <div class="offer-card">
+                        <h3>ვიზუალური მასალა</h3>
+                        <p>მაღალი ხარისხის ფოტო და ვიდეო კონტენტი</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>ვიდეო დოკუმენტაცია</h3>
+                        <p>ექსპერიმენტის სრული ჩანაწერი</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>ბრენდინგი</h3>
+                        <p>SOLO-ს ინტეგრაცია პროექტში</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>მედია გაშუქება</h3>
+                        <p>PR და სოციალური მედია კამპანია</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Contact -->
+        <section class="slide" id="slide9">
+            <div class="slide-bg gradient-bg-8"></div>
+            <div class="slide-content center-content">
+                <h2 class="section-title">კონტაქტი</h2>
+                <div class="divider center"></div>
+                <div class="contact-info">
+                    <div class="coordinator">
+                        <h3>ექა ქარცივაძე</h3>
+                        <p class="role">პროექტის კოორდინატორი</p>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">E</span>
+                            <a href="mailto:ekapartyball@gmail.com">ekapartyball@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">T</span>
+                            <a href="tel:+995551554331">+995 551 554 331</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="closing-message">
+                    <p>ვიმედოვნებთ, რომ ეს პროექტი SOLO-სთვის<br>საინტერესო კულტურულ დიალოგად იქცევა</p>
+                </div>
+                <div class="thank-you">
+                    <span>გმადლობთ ყურადღებისთვის</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
