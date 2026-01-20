@@ -5,70 +5,70 @@
 /* FiraGO Font Family */
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Thin.otf') format('opentype');
+    src: url('assets/font/FiraGO-Thin.otf') format('opentype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-UltraLight.otf') format('opentype');
+    src: url('assets/font/FiraGO-UltraLight.otf') format('opentype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Light.otf') format('opentype');
+    src: url('assets/font/FiraGO-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Regular.otf') format('opentype');
+    src: url('assets/font/FiraGO-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Medium.otf') format('opentype');
+    src: url('assets/font/FiraGO-Medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-SemiBold.otf') format('opentype');
+    src: url('assets/font/FiraGO-SemiBold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Bold.otf') format('opentype');
+    src: url('assets/font/FiraGO-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-ExtraBold.otf') format('opentype');
+    src: url('assets/font/FiraGO-ExtraBold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Roman/FiraGO-Heavy.otf') format('opentype');
+    src: url('assets/font/FiraGO-Heavy.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraGO';
-    src: url('../Font/firago-georgian/FiraGO_OTF_1001/Italic/FiraGO-Italic.otf') format('opentype');
+    src: url('assets/font/FiraGO-Italic.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
@@ -550,15 +550,15 @@ body {
 }
 
 .concept-item.painting::before {
-    background-image: url('../Varlam art/505427486_18470998639076981_4934188774809166531_n.jpg');
+    background-image: url('assets/art/505427486_18470998639076981_4934188774809166531_n.jpg');
 }
 
 .concept-item.music::before {
-    background-image: url('../Varlam art/524962841_18473762107076981_8651336806041051067_n.jpg');
+    background-image: url('assets/art/524962841_18473762107076981_8651336806041051067_n.jpg');
 }
 
 .concept-item.light::before {
-    background-image: url('../Varlam art/50827424_1355594171248777_4469518401364771131_n.jpg');
+    background-image: url('assets/art/50827424_1355594171248777_4469518401364771131_n.jpg');
 }
 
 .concept-item:hover::before {
@@ -653,15 +653,15 @@ body {
 }
 
 .mission-item:nth-child(1)::before {
-    background-image: url('../Varlam art/323208868_121913780574023_3540388787535978245_n.jpg');
+    background-image: url('assets/art/323208868_121913780574023_3540388787535978245_n.jpg');
 }
 
 .mission-item:nth-child(2)::before {
-    background-image: url('../Varlam art/350711975_586584083576577_5595306918663002199_n.jpg');
+    background-image: url('assets/art/350711975_586584083576577_5595306918663002199_n.jpg');
 }
 
 .mission-item:nth-child(3)::before {
-    background-image: url('../Varlam art/12816830_1580133835612957_1010744715_n.jpg');
+    background-image: url('assets/art/12816830_1580133835612957_1010744715_n.jpg');
 }
 
 .mission-item span {
@@ -708,19 +708,19 @@ body {
 }
 
 .flow-step:nth-child(1)::before {
-    background-image: url('../Varlam art/350241812_578272164441740_2726267937136903533_n.jpg');
+    background-image: url('assets/art/350241812_578272164441740_2726267937136903533_n.jpg');
 }
 
 .flow-step:nth-child(3)::before {
-    background-image: url('../Varlam art/350424370_640510187562409_7259580603930902560_n.jpg');
+    background-image: url('assets/art/350424370_640510187562409_7259580603930902560_n.jpg');
 }
 
 .flow-step:nth-child(5)::before {
-    background-image: url('../Varlam art/353373641_809725230763721_6209459612802910273_n.jpg');
+    background-image: url('assets/art/353373641_809725230763721_6209459612802910273_n.jpg');
 }
 
 .flow-step:nth-child(7)::before {
-    background-image: url('../Varlam art/357897140_278871814813443_8276932353291850848_n.jpg');
+    background-image: url('assets/art/357897140_278871814813443_8276932353291850848_n.jpg');
 }
 
 .flow-step:hover::before {
